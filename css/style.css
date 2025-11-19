@@ -1,0 +1,796 @@
+:root {
+    --primary: #F9A392;
+    --body: #fbe3e3;
+    --text: #4A4A4A;
+    --body2: #fafafa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+body, main section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*? ========== Navbar START ========== */
+
+.inicio {
+    position: fixed;      /* La pega a la pantalla */
+    top: 0;               /* Se queda en la parte superior */
+    left: 0;              /* Alineada al borde izquierdo */
+    width: 100%;          /* Que ocupe todo el ancho */
+    z-index: 1000;        /* Que quede encima de todo */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+
+
+.inicio .elementos {
+    background-color: var(--body); 
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inicio .elementos a {
+    text-decoration: none;
+}
+
+.inicio .elementos .elemento-1 h1 {
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary);
+}
+
+.inicio .elementos .elemento-1 .text-dark {
+    color: var(--text);
+}
+
+.inicio .elementos .elemento-2 .nav-link {
+    color: var(--text);
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:5px;
+    transition: color 0.3s ease;
+}
+
+.inicio .elementos .elemento-2 .nav-link:hover {
+    color: var(--primary);
+}
+
+/* EL QUE ESTÁ ACTIVO */
+.inicio .elementos .elemento-2 .nav-link.active {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.inicio .elementos .elemento-3 {
+    display: flex;
+    align-items: center;
+}
+
+.inicio .elementos .elemento-3 .escribeme {
+    color: var(--primary);
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 10px;
+}
+
+.inicio .elementos .elemento-3 .logo-whatsapp {
+    width: 45px;
+    height: 45px;
+}
+
+.hamburger {
+    display: none;          /* Oculto en desktop */
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--text);
+    transition: 0.3s ease;
+}
+
+/*! ========== END ========== */
+
+
+
+
+
+/*? ========== Banner START ========== */
+.banner {
+    
+    padding-top: 60px;
+}
+.banner .elemento {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+/*! ========== END ========== */
+
+
+
+
+
+
+/*? ========== Sobre mí START (versión mejorada) ========== */
+
+.sobre_mi {
+    width: 100%;
+    padding: 120px 0; 
+}
+
+.sobre_mi h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 60px;
+}
+
+.sobre_mi .elementos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Separación moderna entre elementos */
+    padding: 0 60px;
+}
+
+/* Imagen con profundidad suave */
+.sobre_mi .elementos img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    transform: translateY(0);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.sobre_mi .elementos img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.sobre_mi .texto {
+    max-width: 550px;
+    color: var(--text);
+}
+
+.sobre_mi .texto h3 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.sobre_mi .texto p {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Un detalle decorativo moderno debajo del h3 */
+.sobre_mi .texto h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 6px;
+}
+
+/*! ========== END ========== */
+
+
+
+
+
+
+/*? ========== Servicios START ========== */
+.servicios, .servicios-servicios {
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    padding: 120px 0;
+}
+
+.servicios h2,  .servicios-servicios h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 60px;
+}
+
+.servicios .elementos h3, .servicios-servicios .elementos h3 {
+    text-align: center;
+    color: var(--text);
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.servicios-servicios p {
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.servicios .elementos .elementos-a, .servicios .elementos .elementos-b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 60px;
+}
+
+.servicios-servicios .elementos-a {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.servicios img {
+    width: 180px;
+}
+
+.servicios-servicios img {
+    width: 250px;
+    display: flex;
+}
+
+.servicios-servicios .logo-whatsapp {
+    width: 45px;
+    height: 45px;
+    background: var(--body2);
+    margin-bottom: 90px;
+}
+
+
+.servicios img, .servicios-servicios img {
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    transform: translateY(0);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.servicios img:hover, .servicios-servicios img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.servicios-servicios img {
+    margin: auto;
+}
+/*! ========== END ========== */
+
+
+
+
+
+
+/*? ========== Portafolio ========== */
+.portafolio {
+    width: 100%;
+    padding: 120px 0;
+}
+
+.portafolio h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 70px
+}
+
+.portafolio h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+/* === Filtros === */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.filtros li {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid var(--primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.filtros li:hover,
+.filtros li.activo {
+    background: var(--primary);
+    color: white;
+}
+
+/* === Galería === */
+.galeria {
+    width: 100%;
+}
+
+.galeria-portafolio {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* se crean 3 columnas (1fr = 1 columna) */
+    place-items: center; /* centra las columnas creadas */
+    /* padding-bottom: 10px; */
+}
+
+.galeria-portafolio .item {
+    position: relative;
+}
+
+.galeria-a, .galeria-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria-a .item img, .galeria-b .item img {
+    margin: 20px;
+}
+
+.item img {
+    width: 300px;
+    margin-top: 40px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    transform: translateY(0);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.item img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.btn-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-vermas {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 21px;
+    transition: 0.3s ease;
+}
+
+.btn-vermas:hover {
+    background-color: #D98777;
+}
+/*! ========== END ========== */
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    border-radius: 6px;
+}
+
+#cerrar {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/*? ========== Testimonios START ========== */
+.testimonios {
+    background: #fafafa;
+    padding: 120px 0;
+}
+.testimonios h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Cada testimonio */
+.testimonio {
+    display: none; /* Todos ocultos por defecto */
+    align-items: center;
+    text-align: center;
+    /* padding: 20px; */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.testimonio img {
+    margin-bottom: 20px;
+}
+
+.testimonio h4 {
+    font-size: 20px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* El que está activo */
+.testimonio.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonios .slider-container .testimonio .autor {
+    text-align: start;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.testimonios .slider-container .testimonio .autor::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 6px;
+}
+
+/* flechas */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 35px;
+    padding: 5px 12px;
+    cursor: pointer;
+    color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.flecha:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.flecha.izquierda {
+    left: -50px;
+}
+
+.flecha.derecha {
+    right: -50px;
+}
+
+/* puntos inferiores */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+
+.indicadores div {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicadores .activo {
+    background: var(--primary);
+}
+/*! ========== END ========== */
+
+
+
+
+
+/*? ========== Contacto START ========== */
+.contacto {
+    width: 100%;
+    height: auto;
+    padding: 120px 0;
+}
+
+.contacto h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 60px;
+}
+
+.contacto .elementos .elemento-1 {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para cada grupo de formulario (label e input/textarea) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas (labels) */
+.form-group label {
+    display: block;  /* Muestra la etiqueta como un bloque para que ocupe todo el ancho disponible. */
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilos para los campos de entrada de texto (input) y el área de texto (textarea) */
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Usa box-sizing para que el padding y el border se incluyan dentro del ancho total (100%). */
+    transition: border-color 0.3s ease-in-out; /* Suaviza la transición de los cambios de estilo al interactuar (por ejemplo, al enfocar). */
+}
+
+/* Estilos al enfocar (hacer clic o tabular) en los campos */
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary); /* Resalta el borde con un color azul al enfocar para indicar que el campo está activo. */
+    outline: none; /* Elimina el contorno predeterminado del navegador. */
+    box-shadow: 0 0 5px var(--primary);
+    /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */ /* Agrega una sombra de enfoque sutil. */
+}
+
+/* Estilos para el botón de enviar (submit) */
+.btn-submit {
+    /* Muestra el botón como un bloque para que ocupe todo el ancho. */
+    display: block;
+    width: 100%;
+    padding: 12px; /* Relleno interno para que el botón se vea más grande y sea más fácil de pulsar. */
+    background-color: var(--primary);
+    color: white;
+    border: none; /* Elimina el borde predeterminado del botón. */
+    border-radius: 4px;
+    font-weight: bold; /* Pone el texto en negrita. */
+    font-size: 18px;
+    cursor: pointer;  /* Cambia el cursor a una mano */
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease;  /* Suaviza la transición de los cambios de estilo al interactuar. */
+}
+
+/* Estilos al pasar el ratón por encima del botón */
+.btn-submit:hover {
+    background-color: #D98777;
+}
+
+/* Estilos al hacer clic en el botón */
+.btn-submit:active {
+    /* Aplica una pequeña escala para dar la sensación de "clic". */
+    transform: scale(0.99);
+}
+/*! ========== END ========== */
+
+
+
+
+
+/*? ========== Footer START ========== */
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: var(--body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-container p {
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+/*! ========== END ========== */
+
+
+/*? ========== RESPONSIVE MÓVIL ========== */
+@media (max-width: 900px) {
+
+    .inicio .elementos {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    /* Ocultamos las opciones del menú */
+    .elemento-2,
+    .elemento-3 {
+        display: none;
+    }
+
+    /* Mostramos hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menú móvil desplegable */
+    .menu-mobile {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: var(--body);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        transform: translateY(-100%);
+        transition: 0.3s ease;
+        z-index: 999;
+    }
+
+    .menu-mobile.open {
+        transform: translateY(0);
+    }
+
+    .menu-mobile a {
+        color: var(--text);
+        font-size: 22px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Sección Sobre mí */
+    .sobre_mi .elementos {
+        flex-direction: column;      /* Una columna: imagen arriba, texto abajo */
+        text-align: center;          /* Centra el texto */
+        gap: 30px;                   /* Reduce la separación */
+        padding: 0 20px;             /* Menos espacio lateral */
+    }
+
+    .sobre_mi .elementos img {
+        width: 70%;                  /* Imagen más grande pero no exagerada */
+        margin: 0;
+    }
+
+    .sobre_mi .texto {
+        width: 100%;                 /* Texto ancho completo */
+        max-width: 100%;
+    }
+
+    .sobre_mi .texto h3 {
+        font-size: 22px;
+    }
+
+    .sobre_mi .texto p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Portafolio responsable (por si el problema llega allá también) */
+    .portafolio .elementos .elemento-2 .a,
+    .portafolio .elementos .elemento-2 .b {
+        flex-direction: column;      /* Una columna por fila */
+    }
+
+    .portafolio .elementos .elemento-2 img {
+        width: 85%;
+        margin: 15px 0;
+    }
+
+
+    /* Testimonios (el carrusel siempre se ve mejor centrado) */
+    .testimonios h2 {
+        padding-top: 80px;
+    }
+
+    .testimonio-slider {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .testimonio-texto {
+        font-size: 16px;
+    }
+
+    /* Navbar para móvil */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}

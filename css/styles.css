@@ -1,0 +1,40 @@
+.imagen-container {
+  position: relative;
+  display: inline-block; /* O block, dependiendo de tu layout */
+}
+
+.imagen-container img {
+  display: block; /* Elimina el espacio extra debajo de la imagen */
+}
+
+.cuadro-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transición suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-container:hover .cuadro-hover {
+  opacity: 1; /* Se muestra al pasar el mouse */
+}
+
+.boton-mas {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
