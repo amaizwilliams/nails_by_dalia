@@ -142,7 +142,6 @@ body, main section {
 
 
 /*? ========== Sobre mí START (versión mejorada) ========== */
-
 .sobre_mi {
     width: 100%;
     padding: 120px 0; 
@@ -210,7 +209,83 @@ body, main section {
     margin-top: 6px;
 }
 
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icons img {
+    padding: 0 10px;
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+}
+
 /*! ========== END ========== */
+
+/* Página Sobre Mí - Detalle */
+.sobre_mi_detallado {
+    width: 100%;
+    padding: 120px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre_mi_detallado h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary);
+    margin-bottom: 60px;
+}
+
+.bloque {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.bloque-img img {
+    width: 260px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.bloque-img img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.sobre_mi_detallado .bloque {
+    margin-bottom: 50px;
+}
+
+.sobre_mi_detallado .bloque h3 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.sobre_mi_detallado .bloque p, .bloque-texto li  {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.sobre_mi_detallado ul {
+    padding-left: 20px;
+}
+
+.sobre_mi_detallado li {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 6px;
+}
 
 
 
@@ -236,7 +311,7 @@ body, main section {
 .servicios .elementos h3, .servicios-servicios .elementos h3 {
     text-align: center;
     color: var(--text);
-    font-size: 22px;
+    font-size: 27px;
     line-height: 1.6;
 }
 
@@ -651,6 +726,23 @@ body, main section {
     /* Aplica una pequeña escala para dar la sensación de "clic". */
     transform: scale(0.99);
 }
+
+.contact-domicilio {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.contacto .contact-domicilio .elementos,
+.contacto .contact-domicilio .elementoss {
+    width: 40%;
+}
+
+.contacto .contact-domicilio .elementoss iframe {
+    border-radius: 8px;
+    padding: 5px;
+    border: 2px red solid;
+}
 /*! ========== END ========== */
 
 
@@ -661,7 +753,7 @@ body, main section {
 .footer {
     width: 100%;
     height: 120px;
-    background-color: var(--body);
+    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
